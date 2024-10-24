@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://wq4rq6olbqtg"]
+
+[sub_resource type="Curve2D" id="Curve2D_oxrse"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 95, -40, 0, 0, 0, 0, 55, -44, 0, 0, 0, 0, 38, 8, 0, 0, 0, 0, 0, 0)
+}
+point_count = 4
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.74, 2.74)
+
+[node name="Line2D" type="Line2D" parent="Camera2D"]
+position = Vector2(-58, 21)
+points = PackedVector2Array(104, -57, 58, -21, 0, 0)
+width = 2.455
+
+[node name="Path2D" type="Path2D" parent="."]
+visible = false
+curve = SubResource("Curve2D_oxrse")
