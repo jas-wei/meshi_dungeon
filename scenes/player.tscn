@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://577g3omq6siw"]
 
 [ext_resource type="Texture2D" uid="uid://c4fl0td2hmohd" path="res://assets/knight.png" id="1_j7eiy"]
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_rrgu3"]
+[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_rrgu3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lxs4m"]
 

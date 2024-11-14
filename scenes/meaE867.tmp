@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://wq4rq6olbqtg"]
+
+[ext_resource type="Texture2D" uid="uid://bs6gcc1oby10" path="res://assets/Raw_Beef_JE4_BE3.webp" id="1_53gya"]
+[ext_resource type="Script" path="res://scripts/mouse_checkpoint.gd" id="1_clgi6"]
+[ext_resource type="Script" path="res://scenes/knife.gd" id="2_0x1gg"]
+[ext_resource type="Texture2D" uid="uid://d32kmy2csgaix" path="res://assets/minecraft-diamond-sword-pixel-art-59jq9yum67kr2seu.png" id="2_ba5y5"]
+[ext_resource type="PackedScene" uid="uid://cwi4x5r3qsmps" path="res://scenes/mouse_checkpoint.tscn" id="2_jlklv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="beef" type="Sprite2D" parent="."]
+position = Vector2(-8, -13)
+texture = ExtResource("1_53gya")
+
+[node name="knife" type="Sprite2D" parent="."]
+scale = Vector2(0.135, 0.135)
+texture = ExtResource("2_ba5y5")
+script = ExtResource("2_0x1gg")
+follow_speed = null
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.74, 2.74)
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-57, 21)
+points = PackedVector2Array(104, -57, 58, -21, 0, 0)
+width = 2.455
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_clgi6")
+
+[node name="mouse checkpoint" parent="Area2D" instance=ExtResource("2_jlklv")]
+position = Vector2(-56, 20)
+
+[node name="mouse checkpoint2" parent="Area2D" instance=ExtResource("2_jlklv")]
+position = Vector2(2, 0)
+
+[node name="mouse checkpoint3" parent="Area2D" instance=ExtResource("2_jlklv")]
+position = Vector2(42, -33)
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

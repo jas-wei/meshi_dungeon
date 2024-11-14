@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwi4x5r3qsmps"]
+
+[ext_resource type="Texture2D" uid="uid://b6jovt0gpbhia" path="res://assets/icon.svg" id="2_oe7fm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15kgs"]
+size = Vector2(14, 14)
+
+[node name="mouse checkpoint" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_15kgs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-2.38419e-07, 2.38419e-07)
+scale = Vector2(0.122923, 0.112796)
+texture = ExtResource("2_oe7fm")
